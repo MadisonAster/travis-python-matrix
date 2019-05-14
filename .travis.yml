@@ -56,14 +56,19 @@ matrix:
       before_install: brew upgrade pyenv; pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
 
-# Change anything below these lines to suit your CI needs.
+# Change anything below to suit your CI needs.
 # Python and pip exectuables are just named "python" and "pip" on all platforms!
 
-# Here's an example; just uncomment below to build and upload 9 wheels to PyPI.
-# You must have TWINE_USERNAME/TWINE_PASSWORD environment variables in Travis!
+# Example:
 
-# install: pip install --upgrade setuptools twine wheel
+# Uncomment the lines below to build and upload all nine wheels to PyPI.
+# (You must have TWINE_USERNAME/TWINE_PASSWORD environment variables in Travis!)
 
-# script:
+install:
+  - pip --version
+#   - pip install --upgrade setuptools twine wheel
+
+script:
+  - python --version
 #   - python setup.py sdist bdist_wheel
 #   - twine upload dist/* --skip-existing
