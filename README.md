@@ -34,16 +34,16 @@ Supported Operating Systems
 Background
 ----------
  
-This project was inspired by Steve Dower's talk at PyCon 2019, entitled ["Python on Windows is Okay, Actually"](https://www.youtube.com/watch?v=uoI57uMdDD4). I realized that I was one of the developers who hadn't really tried hard enough to run CI against Windows, because it seemed like too much work to be useful (and, as Steve notes at [23:45](https://youtu.be/uoI57uMdDD4?t=1425), I just *really didn't want to*).
+This project was inspired by Steve Dower's talk at PyCon 2019, entitled ["Python on Windows is Okay, Actually"](https://www.youtube.com/watch?v=uoI57uMdDD4). I quickly realized that I was one of the engineers who hadn't really tried hard enough to run CI against Windows, because it seemed like too much work to be useful (and, as Steve notes at [23:45](https://youtu.be/uoI57uMdDD4?t=1425), I just *really didn't want to*).
  
-Every solution I could find on the internet for true, cross-platform CI had drawbacks in that it either:
+Every solution I could find on the internet for true, cross-platform CI had drawbacks in that they either:
 
 - Required me to use multiple CI providers.
 - Only supported one major Python version.
 - Required ugly, opaque hacks and shell scripting to work around different `python` and `pip` invocations.
 - Required lots of trial-and-error to set up properly.
 
-I figured that this is the sort of problem that should only be solved once, and shared with everybody else. So, I decided to make a simple, drop-in Travis matrix for simple, consistent cross-platform CI for multiple Python versions. Within minutes of this repository going live, it had already found several sneaky, Windows-only bugs in [a medium-sized project's quickstart guide](https://github.com/InvestmentSystems/static-frame/pull/51)!
+I figured that this is the sort of problem that should only be solved once, and shared with everybody else. So, I decided to make a simple, drop-in Travis matrix for simple, consistent cross-platform CI against multiple Python versions. Within minutes of this repository going live, it had already found several sneaky, Windows-only bugs in [a medium-sized project's quickstart guide](https://github.com/InvestmentSystems/static-frame/pull/51)!
 
 Enjoy!
 
