@@ -18,11 +18,11 @@ matrix:
 
     - name: CPython 3.6.8 on Ubuntu 12.04 (Precise Pangolin)
       dist: precise
-      before_install: wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz && tar -xvf Python-3.6.8.tgz && cd Python-3.6.8 && sudo make install
+      before_install: wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz && tar -xf Python-3.6.8.tgz && cd Python-3.6.8 && ./configure && sudo make install && alias python=python3 && alias pip=pip3
 
     - name: CPython 3.7.3 on Ubuntu 12.04 (Precise Pangolin)
       dist: precise
-      before_install: wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz && tar -xvf Python-3.7.3.tgz && cd Python-3.7.3 && ./configure && sudo make install
+      before_install: wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz && tar -xf Python-3.7.3.tgz && cd Python-3.7.3 && ./configure && sudo make install && alias python=python3 && alias pip=pip3
   
     - name: CPython 3.5.2 on Ubuntu 14.04 (Trusty Tahr)
       python: 3.5.2
@@ -31,11 +31,11 @@ matrix:
 
     - name: CPython 3.6.8 on Ubuntu 14.04 (Trusty Tahr)
       dist: trusty
-      before_install: wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz && tar -xvf Python-3.6.8.tgz && cd Python-3.6.8 && sudo make install
+      before_install: wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz && tar -xf Python-3.6.8.tgz && cd Python-3.6.8 && ./configure && sudo make install && alias python=python3 && alias pip=pip3
 
     - name: CPython 3.7.3 on Ubuntu 14.04 (Trusty Tahr)
       dist: trusty
-      before_install: wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz && tar -xvf Python-3.7.3.tgz && cd Python-3.7.3 && ./configure && sudo make install
+      before_install: wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz && tar -xf Python-3.7.3.tgz && cd Python-3.7.3 && ./configure && sudo make install && alias python=python3 && alias pip=pip3
   
     - name: CPython 3.5.2 on Ubuntu 16.04 (Xenial Xerus)
       python: 3.5.2
@@ -70,20 +70,17 @@ matrix:
     - name: CPython 3.5.2 on macOS 10.10 (Yosemite)
       os: osx
       osx_image: xcode6.4
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
-      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
+      before_install: wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz && tar -xf Python-3.5.2.tgz && cd Python-3.5.2 && ./configure && sudo make install && alias python=python3 && alias pip=pip3
 
     - name: CPython 3.6.8 on macOS 10.10 (Yosemite)
       os: osx
       osx_image: xcode6.4
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
-      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
+      before_install: wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz && tar -xf Python-3.6.8.tgz && cd Python-3.6.8 && ./configure && sudo make install && alias python=python3 && alias pip=pip3
 
     - name: CPython 3.7.3 on macOS 10.10 (Yosemite)
       os: osx
       osx_image: xcode6.4
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
-      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
+      before_install: wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz && tar -xf Python-3.7.3.tgz && cd Python-3.7.3 && ./configure && sudo make install && alias python=python3 && alias pip=pip3
       
     - name: CPython 3.5.2 on macOS 10.11 (El Capitan)
       os: osx
@@ -94,19 +91,19 @@ matrix:
     - name: CPython 3.6.8 on macOS 10.11 (El Capitan)
       os: osx
       osx_image: xcode7.3
-      before_install: pyenv install $PYENV_VERSION
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
 
     - name: CPython 3.7.3 on macOS 10.11 (El Capitan)
       os: osx
       osx_image: xcode7.3
-      before_install: pyenv install $PYENV_VERSION
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
       
     - name: CPython 3.5.2 on macOS 10.12 (Sierra)
       os: osx
       osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      before_install: pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
 
     - name: CPython 3.6.8 on macOS 10.12 (Sierra)
@@ -124,7 +121,7 @@ matrix:
     - name: CPython 3.5.2 on macOS 10.13 (High Sierra)
       os: osx
       osx_image: xcode10.1
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      before_install: pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
 
     - name: CPython 3.6.8 on macOS 10.13 (High Sierra)
