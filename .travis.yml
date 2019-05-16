@@ -44,37 +44,37 @@ matrix:
     - name: CPython 3.5.2 on macOS 10.10 (Yosemite)
       os: osx
       osx_image: xcode6.4
-      before install: brew install pyenv && pyenv install $PYENV_VERSION
+      before install: brew upgrade && brew install pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
 
     - name: CPython 3.6.8 on macOS 10.10 (Yosemite)
       os: osx
       osx_image: xcode6.4
-      before_install: brew install pyenv && pyenv install $PYENV_VERSION
+      before_install: brew upgrade && brew install pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
 
     - name: CPython 3.7.3 on macOS 10.10 (Yosemite)
       os: osx
       osx_image: xcode6.4
-      before_install: brew install pyenv && pyenv install $PYENV_VERSION
+      before_install: brew upgrade && brew install pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
 
     - name: CPython 3.5.2 on macOS 10.11 (El Capitan)
       os: osx
       osx_image: xcode8
-      before_install: pyenv install $PYENV_VERSION
+      before_install: brew upgrade && brew install pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
 
     - name: CPython 3.6.8 on macOS 10.11 (El Capitan)
       os: osx
       osx_image: xcode8
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      before_install: brew upgrade && brew install pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
 
     - name: CPython 3.7.3 on macOS 10.11 (El Capitan)
       os: osx
       osx_image: xcode8
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      before_install: brew upgrade && brew install pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
       
 #     - name: CPython 3.5.2 on macOS 10.12 (Sierra)
