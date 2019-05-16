@@ -11,6 +11,36 @@ matrix:
 
   include:
   
+    - name: CPython 3.5.2 on Ubuntu 12.04 (Precise Pangolin)
+      python: 3.5.2
+      dist: precise
+      language: python
+      
+    - name: CPython 3.6.8 on Ubuntu 12.04 (Precise Pangolin)
+      python: 3.6.8
+      dist: precise
+      language: python
+
+    - name: CPython 3.7.3 on Ubuntu 12.04 (Precise Pangolin)
+      python: 3.7.3
+      dist: precise
+      language: python
+  
+    - name: CPython 3.5.2 on Ubuntu 14.04 (Trusty Tahr)
+      python: 3.5.2
+      dist: trusty
+      language: python
+      
+    - name: CPython 3.6.8 on Ubuntu 14.04 (Trusty Tahr)
+      python: 3.6.8
+      dist: trusty
+      language: python
+
+    - name: CPython 3.7.3 on Ubuntu 14.04 (Trusty Tahr)
+      python: 3.7.3
+      dist: trusty
+      language: python
+  
     - name: CPython 3.5.2 on Ubuntu 16.04 (Xenial Xerus)
       python: 3.5.2
       dist: xenial
@@ -40,6 +70,78 @@ matrix:
       os: windows
       before_install: choco install python --version 3.7.3
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
+      
+    - name: CPython 3.5.2 on macOS 10.10 (Yosemite)
+      os: osx
+      osx_image: xcode6.4
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
+
+    - name: CPython 3.6.8 on macOS 10.10 (Yosemite)
+      os: osx
+      osx_image: xcode6.4
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
+
+    - name: CPython 3.7.3 on macOS 10.10 (Yosemite)
+      os: osx
+      osx_image: xcode6.4
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
+      
+    - name: CPython 3.5.2 on macOS 10.11 (El Capitan)
+      os: osx
+      osx_image: xcode8
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
+
+    - name: CPython 3.6.8 on macOS 10.11 (El Capitan)
+      os: osx
+      osx_image: xcode8
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
+
+    - name: CPython 3.7.3 on macOS 10.11 (El Capitan)
+      os: osx
+      osx_image: xcode8
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
+      
+    - name: CPython 3.5.2 on macOS 10.12 (Sierra)
+      os: osx
+      osx_image: xcode9.2
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
+
+    - name: CPython 3.6.8 on macOS 10.12 (Sierra)
+      os: osx
+      osx_image: xcode9.2
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
+
+    - name: CPython 3.7.3 on macOS 10.12 (Sierra)
+      os: osx
+      osx_image: xcode9.2
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
+    
+    - name: CPython 3.5.2 on macOS 10.13 (High Sierra)
+      os: osx
+      osx_image: xcode10.1
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
+
+    - name: CPython 3.6.8 on macOS 10.13 (High Sierra)
+      os: osx
+      osx_image: xcode10.1
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
+
+    - name: CPython 3.7.3 on macOS 10.13 (High Sierra)
+      os: osx
+      osx_image: xcode10.1
+      before_install: pyenv install $PYENV_VERSION
+      env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
 
     - name: CPython 3.5.2 on macOS 10.14 (Mojave)
       os: osx
@@ -62,16 +164,6 @@ matrix:
 # Change anything below to suit your CI needs.
 # Python and pip exectuables are just named "python" and "pip" on all platforms!
 
-# Example:
+install: pip --version
 
-# Uncomment the lines below to build and upload all nine wheels to PyPI.
-# (You must have TWINE_USERNAME/TWINE_PASSWORD environment variables in Travis!)
-
-install:
-  - pip --version
-#   - pip install --upgrade setuptools twine wheel
-
-script:
-  - python --version
-#   - python setup.py sdist bdist_wheel
-#   - twine upload dist/* --skip-existing
+script: python --version
