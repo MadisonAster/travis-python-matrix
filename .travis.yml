@@ -44,19 +44,19 @@ matrix:
     - name: CPython 3.5.2 on macOS 10.14 (Mojave)
       os: osx
       osx_image: xcode10.2
-      before_install: brew install zlib && brew upgrade pyenv && pyenv install $PYENV_VERSION
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
 
     - name: CPython 3.6.8 on macOS 10.14 (Mojave)
       os: osx
       osx_image: xcode10.2
-      before_install: brew install zlib && brew upgrade pyenv && pyenv install $PYENV_VERSION
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
 
     - name: CPython 3.7.3 on macOS 10.14 (Mojave)
       os: osx
       osx_image: xcode10.2
-      before_install: brew install zlib && brew upgrade pyenv && pyenv install $PYENV_VERSION
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
 
 # Change anything below to suit your CI needs.
