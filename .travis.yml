@@ -127,80 +127,80 @@ matrix:
       env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
       language: shell
 
-    - name: CPython 3.7.3 on macOS 10.12 (Sierra)
+    - name: CPython 3.7.3 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
       language: shell
 
-    - name: CPython 3.7.2 on macOS 10.12 (Sierra)
+    - name: CPython 3.7.2 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.2
       language: shell
 
-    - name: CPython 3.7.1 on macOS 10.12 (Sierra)
+    - name: CPython 3.7.1 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.1
       language: shell
 
-    - name: CPython 3.7.0 on macOS 10.12 (Sierra)
+    - name: CPython 3.7.0 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.0
       language: shell
 
-    - name: CPython 3.6.8 on macOS 10.12 (Sierra)
+    - name: CPython 3.6.8 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
       language: shell
 
-    - name: CPython 3.6.7 on macOS 10.12 (Sierra)
+    - name: CPython 3.6.7 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.7
       language: shell
 
-    - name: CPython 3.6.6 on macOS 10.12 (Sierra)
+    - name: CPython 3.6.6 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.6
       language: shell
 
-    - name: CPython 3.6.5 on macOS 10.12 (Sierra)
+    - name: CPython 3.6.5 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.5
       language: shell
 
-    - name: CPython 3.6.4 on macOS 10.12 (Sierra)
+    - name: CPython 3.6.4 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.4
       language: shell
 
-    - name: CPython 3.6.3 on macOS 10.12 (Sierra)
+    - name: CPython 3.6.3 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.3
       language: shell
 
-    - name: CPython 3.5.2 on macOS 10.12 (Sierra)
+    - name: CPython 3.5.2 on macOS 10.14 (Mojave)
       os: osx
-      osx_image: xcode9.2
-      before_install: pyenv install $PYENV_VERSION
+      osx_image: xcode10.2
+      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
       language: shell
 
@@ -281,82 +281,83 @@ matrix:
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
       language: shell
 
-    - name: CPython 3.7.3 on macOS 10.14 (Mojave)
+    - name: CPython 3.7.3 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
       language: shell
 
-    - name: CPython 3.7.2 on macOS 10.14 (Mojave)
+    - name: CPython 3.7.2 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.2
       language: shell
 
-    - name: CPython 3.7.1 on macOS 10.14 (Mojave)
+    - name: CPython 3.7.1 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.1
       language: shell
 
-    - name: CPython 3.7.0 on macOS 10.14 (Mojave)
+    - name: CPython 3.7.0 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.0
       language: shell
 
-    - name: CPython 3.6.8 on macOS 10.14 (Mojave)
+    - name: CPython 3.6.8 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
       language: shell
 
-    - name: CPython 3.6.7 on macOS 10.14 (Mojave)
+    - name: CPython 3.6.7 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.7
       language: shell
 
-    - name: CPython 3.6.6 on macOS 10.14 (Mojave)
+    - name: CPython 3.6.6 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.6
       language: shell
 
-    - name: CPython 3.6.5 on macOS 10.14 (Mojave)
+    - name: CPython 3.6.5 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.5
       language: shell
 
-    - name: CPython 3.6.4 on macOS 10.14 (Mojave)
+    - name: CPython 3.6.4 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: brew upgrade pyenv && pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.4
       language: shell
 
-    - name: CPython 3.6.3 on macOS 10.14 (Mojave)
+    - name: CPython 3.6.3 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.3
       language: shell
 
-    - name: CPython 3.5.2 on macOS 10.14 (Mojave)
+    - name: CPython 3.5.2 on macOS 10.12 (Sierra)
       os: osx
-      osx_image: xcode10.2
-      before_install: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+      osx_image: xcode9.2
+      before_install: pyenv install $PYENV_VERSION
       env: PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
       language: shell
+
 
 # Change anything below to suit your CI needs.
 
