@@ -39,11 +39,11 @@ This project was inspired by Steve Dower's talk at PyCon 2019, entitled ["Python
 Every solution I could find on the internet for true, cross-platform CI had drawbacks in that they either:
 
 - Required me to use multiple CI providers.
-- Only supported one major Python version.
-- Required ugly, opaque hacks and shell scripting to work around different `python` and `pip` invocations.
-- Required lots of trial-and-error to set up properly.
+- Only supported one Python minor version, or different patch versions per platform.
+- Needed ugly, opaque hacks and shell scripting to work around different `python` and `pip` invocations.
+- Took lots of trial-and-error to set up properly.
 
-I figured that this is the sort of problem that should only be solved once, and shared with everybody else. So, I decided to make a simple, drop-in Travis matrix for simple, consistent cross-platform CI against multiple Python versions. Within minutes of this repository going live, it had already found several sneaky, Windows-only bugs in [a medium-sized project's quickstart guide](https://github.com/InvestmentSystems/static-frame/pull/51)!
+I figured that this was the sort of problem that should only be solved once, then shared with everybody else. So, I decided to make a drop-in Travis matrix for simple, consistent cross-platform CI against multiple Python versions. Within minutes of this repository going live, it had already found several sneaky, Windows-only bugs in [a medium-sized project's quickstart guide](https://github.com/InvestmentSystems/static-frame/pull/51)!
 
 Enjoy!
 
