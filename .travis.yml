@@ -16,21 +16,6 @@ matrix:
       dist: xenial
       language: python
       
-    - name: CPython 3.6.0 on Ubuntu 16.04 (Xenial Xerus)
-      python: 3.6.0
-      dist: xenial
-      language: python
-      
-    - name: CPython 3.6.1 on Ubuntu 16.04 (Xenial Xerus)
-      python: 3.6.1
-      dist: xenial
-      language: python
-      
-    - name: CPython 3.6.2 on Ubuntu 16.04 (Xenial Xerus)
-      python: 3.6.2
-      dist: xenial
-      language: python
-      
     - name: CPython 3.6.3 on Ubuntu 16.04 (Xenial Xerus)
       python: 3.6.3
       dist: xenial
@@ -86,10 +71,50 @@ matrix:
       before_install: choco install python --version 3.5.2.20161029
       env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
 
+    - name: CPython 3.6.3 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.6.3
+      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+
+    - name: CPython 3.6.4 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.6.4
+      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+
+    - name: CPython 3.6.5 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.6.5
+      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+
+    - name: CPython 3.6.6 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.6.6
+      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+
+    - name: CPython 3.6.7 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.6.7
+      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+
     - name: CPython 3.6.8 on Windows Server 1803
       os: windows
       before_install: choco install python --version 3.6.8
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+
+    - name: CPython 3.7.0 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.7.0
+      env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
+
+    - name: CPython 3.7.1 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.7.1
+      env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
+
+    - name: CPython 3.7.2 on Windows Server 1803
+      os: windows
+      before_install: choco install python --version 3.7.2
+      env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
 
     - name: CPython 3.7.3 on Windows Server 1803
       os: windows
