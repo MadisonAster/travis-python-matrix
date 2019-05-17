@@ -13,17 +13,26 @@ Travis Python Matrix
 
 `.travis.yml` contains the necessary boilerplate to get consistent versions of `python` and `pip` executables on all three of Travis's supported operating systems. Simply add your own `script`, `install`, or other configurations in order to build and test cross-platform with minimal effort!
 
-Supported Python Versions
--------------------------
+Support
+-------
+
+Unchecked boxes are disabled by default. They can be enabled by uncommenting them in `.travis.yml`.
+
+### Python Versions
 
 - [X] CPython 3.7.3
+- [ ] CPython 3.7.2
+- [ ] CPython 3.7.1
+- [ ] CPython 3.7.0
 - [X] CPython 3.6.8
+- [ ] CPython 3.6.7
+- [ ] CPython 3.6.6
+- [ ] CPython 3.6.5
+- [ ] CPython 3.6.4
+- [ ] CPython 3.6.3
 - [X] CPython 3.5.2
 
-Supported Operating Systems
-----------------------------
-
-*Unchecked boxes are disabled by default. They can be enabled by uncommenting them in `.travis.yml`.*
+### Operating Systems
 
 - [X] Ubuntu 16.04 (Xenial Xerus)
 - [X] Windows Server 1803
