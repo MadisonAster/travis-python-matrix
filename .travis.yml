@@ -16,8 +16,63 @@ matrix:
       dist: xenial
       language: python
       
+    - name: CPython 3.6.0 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.0
+      dist: xenial
+      language: python
+      
+    - name: CPython 3.6.1 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.1
+      dist: xenial
+      language: python
+      
+    - name: CPython 3.6.2 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.2
+      dist: xenial
+      language: python
+      
+    - name: CPython 3.6.3 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.3
+      dist: xenial
+      language: python
+      
+    - name: CPython 3.6.4 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.4
+      dist: xenial
+      language: python
+      
+    - name: CPython 3.6.5 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.5
+      dist: xenial
+      language: python
+      
+    - name: CPython 3.6.6 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.6
+      dist: xenial
+      language: python
+      
+    - name: CPython 3.6.7 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.6.7
+      dist: xenial
+      language: python
+      
     - name: CPython 3.6.8 on Ubuntu 16.04 (Xenial Xerus)
       python: 3.6.8
+      dist: xenial
+      language: python
+
+    - name: CPython 3.7.0 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.7.0
+      dist: xenial
+      language: python
+
+    - name: CPython 3.7.1 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.7.1
+      dist: xenial
+      language: python
+
+    - name: CPython 3.7.2 on Ubuntu 16.04 (Xenial Xerus)
+      python: 3.7.2
       dist: xenial
       language: python
 
