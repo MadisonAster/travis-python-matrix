@@ -417,4 +417,4 @@ matrix:
 
 install: pip --version
 
-script: python --version
+script: python -c 'import os, platform; v = platform.python_version(); assert v in os.environ["TRAVIS_JOB_NAME"], v'
