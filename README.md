@@ -11,12 +11,95 @@ Travis Python Matrix
 
 </div>
 
-`.travis.yml` contains the necessary boilerplate to get consistent versions of `python` and `pip` executables on all three of Travis's supported operating systems. Simply add your own `script`, `install`, or other configurations in order to build and test cross-platform with minimal effort!
+The snippet below contains the necessary boilerplate to get consistent versions of `python` and `pip` executables on all three of Travis's supported operating systems. Simply add your own `script`, `install`, or other configurations in order to build and test cross-platform with minimal effort!
+
+```yml
+# https://github.com/brandtbucher/travis-python-matrix
+
+# CPython 3.7.3 / CPython 3.6.8 / CPython 3.5.2
+# Ubuntu 16.04 (Xenial Xerus) / Windows Server 1803 / macOS 10.14 (Mojave)
+
+# Just comment out any matrix entries you don't need.
+
+matrix:
+
+  include:
+  
+    - name: CPython 3.7.3 on Ubuntu 16.04 (Xenial Xerus)
+      language: python
+      os: linux
+      dist: xenial
+      python: 3.7.3
+
+    - name: CPython 3.6.8 on Ubuntu 16.04 (Xenial Xerus)
+      language: python
+      os: linux
+      dist: xenial
+      python: 3.6.8
+      
+    - name: CPython 3.5.2 on Ubuntu 16.04 (Xenial Xerus)
+      language: python
+      os: linux
+      dist: xenial
+      python: 3.5.2
+
+    - name: CPython 3.7.3 on Windows Server 1803
+      language: shell
+      os: windows
+      before_install:
+        - export PATH=/c/Python37:/c/Python37/Scripts:$PATH
+        - choco install python --version 3.7.3
+
+    - name: CPython 3.6.8 on Windows Server 1803
+      language: shell
+      os: windows
+      before_install:
+        - export PATH=/c/Python36:/c/Python36/Scripts:$PATH
+        - choco install python --version 3.6.8
+
+    - name: CPython 3.5.2 on Windows Server 1803
+      language: shell
+      os: windows
+      before_install:
+        - export PATH=/c/Python35:/c/Python35/Scripts:$PATH
+        - choco install python --version 3.5.2.20161029
+
+    - name: CPython 3.7.3 on macOS 10.14 (Mojave)
+      language: shell
+      os: osx
+      osx_image: xcode10.2
+      before_install:
+        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
+        - CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+
+    - name: CPython 3.6.8 on macOS 10.14 (Mojave)
+      language: shell
+      os: osx
+      osx_image: xcode10.2
+      before_install:
+        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
+        - CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+
+    - name: CPython 3.5.2 on macOS 10.14 (Mojave)
+      language: shell
+      os: osx
+      osx_image: xcode10.2
+      before_install:
+        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
+        - CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+
+# Change anything below to suit your CI needs.
+# Python and pip exectuables are just named "python" and "pip" on all platforms!
+
+install: pip --version
+
+script: python --version
+```
 
 Support
 -------
 
-Unchecked boxes are disabled by default. They can be enabled by uncommenting them in `.travis.yml`.
+Unchecked boxes aren't included in the above snippet. They can be copied-and-pasted from `.travis.yml`.
 
 ### Python Versions
 
