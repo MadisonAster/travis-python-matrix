@@ -145,7 +145,7 @@ matrix:
       language: shell
       os: windows
       before_install:
-        - export PATH=/c/Python36:/c/Python36/Scripts:$PATH
+        - export PATH=/c/Python35:/c/Python35/Scripts:$PATH
         - choco install python --version 3.5.2.20161029
 
     - name: CPython 3.7.3 on macOS 10.14 (Mojave)
