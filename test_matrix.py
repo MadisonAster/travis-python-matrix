@@ -1,10 +1,9 @@
 import os
+import platform
 import sys
 
 
-IMPLEMENTATIONS = {
-    "cpython": "CPython",
-}
+NAME = os.environ["TRAVIS_JOB_NAME"]
 
 PLATFORMS = {
     "darwin": "macOS",
@@ -13,13 +12,13 @@ PLATFORMS = {
 }
 
 
-def test_platform():
-    assert PLATFORMS[sys.platform] in os.environ["TRAVIS_JOB_NAME"]
+def test_platform() -> None:
+    assert PLATFORMS[sys.platform] in NAME
 
 
-def test_python_version():
-    assert '.'.join(sys.version_info[:3]) in os.environ["TRAVIS_JOB_NAME"]
+def test_python_implementation() -> None:
+    assert platform.python_implementation() in NAME
 
 
-def test_python_implementation():
-    assert IMPLEMENTATIONS[sys.implementation.name] in os.environ["TRAVIS_JOB_NAME"]
+def test_python_version() -> None:
+    assert platform.python_version() in NAME
