@@ -415,6 +415,10 @@ matrix:
 # Change anything below to suit your CI needs.
 # Python and pip exectuables are just named "python" and "pip" on all platforms!
 
-install: pip --version
+install:
+  - pip --version
+  - pip install pytest
 
-script: python -c 'import os, platform; v = platform.python_version(); assert v in os.environ["TRAVIS_JOB_NAME"], v'
+script:
+  - python --version
+  - pytest
