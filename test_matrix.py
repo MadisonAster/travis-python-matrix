@@ -26,7 +26,7 @@ def test_matrix() -> None:
     elif system == "Linux":
         system = distro.name()
         version = distro.version()
-        version += " (" + distro.os_release_attr("codename")) + ")"
+        version += " (" + distro.os_release_attr("codename") + ")"
     else:
         assert False, version
 
