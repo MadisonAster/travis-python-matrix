@@ -1,24 +1,37 @@
-import os
 import platform
-import sys
 
 
-NAME = os.environ["TRAVIS_JOB_NAME"]
-
-PLATFORMS = {
-    "darwin": "macOS",
-    "linux": "Ubuntu",
-    "win32": "Windows",
+MAC_ALIAS = {
+    "10.14": "Mojave",
+    "10.13": "High Sierra",
+    "10.12": "Sierra"
 }
 
+def test_matrix() -> None:
 
-def test_platform() -> None:
-    assert PLATFORMS[sys.platform] in NAME
+    python_implementation = platform.python_implementation()
+    python_version = platform.python_version()
+    system = platform.system()
+    version = platform.version()
+
+    if system == "Darwin":
+        system = "macOS"
+        version = platform.mac_ver()[0]
+        if version.startswith("10.14"):
+            alias = "Mojave"
+        elif version.startswith("10.13"):
+            alias = "High Sierra"
+        elif version.startswith("10.12"):
+            alias = "Sierra"
+    elif system == "Windows":
+        alias = platform.win32_ver()
+    else:
+        alias = release()
 
 
-def test_python_implementation() -> None:
-    assert platform.python_implementation() in NAME
-
-
-def test_python_version() -> None:
-    assert platform.python_version() in NAME
+    name = "{} {} on {} {} ({})".format(
+        platform.python_implementation(),
+        platform.python_version(),
+        system, version, alias,
+    )
+    assert name == os.environ["TRAVIS_JOB_NAME"], name
