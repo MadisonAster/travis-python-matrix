@@ -1,33 +1,38 @@
 import os
 import platform
 
+import distro
+
 
 def test_matrix() -> None:
 
     python_implementation = platform.python_implementation()
     python_version = platform.python_version()
     system = platform.system()
-    version = platform.version()
 
     if system == "Darwin":
         system = "macOS"
         version = platform.mac_ver()[0]
         if version.startswith("10.14"):
-            alias = "Mojave"
+            version += " (Mojave)"
         elif version.startswith("10.13"):
-            alias = "High Sierra"
+            version += " (High Sierra)"
         elif version.startswith("10.12"):
-            alias = "Sierra"
+            version += " (Sierra)"
+        else:
+            assert False, version
     elif system == "Windows":
-        alias = platform.win32_ver()
+        version = platform.win32_ver()
+    elif system == "Linux":
+        system = distro.name()
+        version = distro.version(pretty=True)
     else:
-        alias = platform.release()
+        assert False, version
 
-
-    name = "{} {} on {} {} ({})".format(
+    name = "{} {} on {} {}".format(
         platform.python_implementation(),
         platform.python_version(),
-        system, version, alias,
+        system, version,
     )
 
-    assert name == os.environ["TRAVIS_JOB_NAME"], name
+    assert name == os.environ["TRAVIS_JOB_NAME"]
