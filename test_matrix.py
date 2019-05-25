@@ -22,10 +22,11 @@ def test_matrix() -> None:
         else:
             assert False, version
     elif system == "Windows":
-        version = platform.win32_ver()
+        version = platform.win32_ver()[1]
     elif system == "Linux":
         system = distro.name()
-        version = distro.version(pretty=True)
+        version = distro.version()
+        version += " (" + distro.os_release_attr("codename")) + ")"
     else:
         assert False, version
 
