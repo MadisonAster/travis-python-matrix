@@ -1,11 +1,6 @@
+import os
 import platform
 
-
-MAC_ALIAS = {
-    "10.14": "Mojave",
-    "10.13": "High Sierra",
-    "10.12": "Sierra"
-}
 
 def test_matrix() -> None:
 
@@ -26,7 +21,7 @@ def test_matrix() -> None:
     elif system == "Windows":
         alias = platform.win32_ver()
     else:
-        alias = release()
+        alias = platform.release()
 
 
     name = "{} {} on {} {} ({})".format(
@@ -34,4 +29,5 @@ def test_matrix() -> None:
         platform.python_version(),
         system, version, alias,
     )
+
     assert name == os.environ["TRAVIS_JOB_NAME"], name
