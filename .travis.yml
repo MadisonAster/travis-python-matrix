@@ -417,7 +417,7 @@ matrix:
 
 install:
   - pip --version
-  - pip install pytest
+  - pip install distro pytest
 
 script:
   - python --version
