@@ -14,18 +14,25 @@ def test_matrix() -> None:
         system = "macOS"
         version = platform.mac_ver()[0]
         if version.startswith("10.14"):
-            version += " (Mojave)"
+            version = "10.14 (Mojave)"
         elif version.startswith("10.13"):
-            version += " (High Sierra)"
+            version = "10.13 (High Sierra)"
         elif version.startswith("10.12"):
-            version += " (Sierra)"
+            version = "10.12 (Sierra)"
         else:
             assert False, version
     elif system == "Windows":
-        version = platform.win32_ver()[1]
+        version = platform.win32_ver()[0]
     elif system == "Linux":
         system = distro.name()
         version = distro.version()
+        if system == "Ubuntu":
+            if version == "16.04":
+                version += " (Xenial Xerus)"
+            else:
+                assert False, version
+        else:
+            assert False, system
     else:
         assert False, system
 
