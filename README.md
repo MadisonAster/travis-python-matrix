@@ -17,7 +17,7 @@ The snippet below contains the necessary boilerplate to get consistent versions 
 # https://github.com/brandtbucher/travis-python-matrix
 
 # CPython 3.7.3 / CPython 3.6.8 / CPython 3.5.2
-# Ubuntu 16.04 (Xenial Xerus) / Windows Server 1803 / macOS 10.14 (Mojave)
+# Ubuntu 16.04 (Xenial Xerus) / Windows 10 / macOS 10.14 (Mojave)
 
 # Just comment out any matrix entries you don't need.
 
@@ -43,21 +43,21 @@ matrix:
       dist: xenial
       python: 3.5.2
 
-    - name: CPython 3.7.3 on Windows Server 1803
+    - name: CPython 3.7.3 on Windows 10
       language: shell
       os: windows
       before_install:
         - export PATH=/c/Python37:/c/Python37/Scripts:$PATH
         - choco install python --version 3.7.3
 
-    - name: CPython 3.6.8 on Windows Server 1803
+    - name: CPython 3.6.8 on Windows 10
       language: shell
       os: windows
       before_install:
         - export PATH=/c/Python36:/c/Python36/Scripts:$PATH
         - choco install python --version 3.6.8
 
-    - name: CPython 3.5.2 on Windows Server 1803
+    - name: CPython 3.5.2 on Windows 10
       language: shell
       os: windows
       before_install:
