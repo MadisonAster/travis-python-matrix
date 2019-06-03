@@ -242,7 +242,7 @@ matrix:
       osx_image: xcode10.1
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.7.2 on macOS 10.13 (High Sierra)
       language: shell
@@ -250,7 +250,7 @@ matrix:
       osx_image: xcode10.1
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.2
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.7.1 on macOS 10.13 (High Sierra)
       language: shell
@@ -274,7 +274,7 @@ matrix:
       osx_image: xcode10.1
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.7 on macOS 10.13 (High Sierra)
       language: shell
@@ -330,7 +330,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.3
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.7.2 on macOS 10.12 (Sierra)
       language: shell
@@ -338,7 +338,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.2
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.7.1 on macOS 10.12 (Sierra)
       language: shell
@@ -346,7 +346,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.1
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.7.0 on macOS 10.12 (Sierra)
       language: shell
@@ -354,7 +354,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.0
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.8 on macOS 10.12 (Sierra)
       language: shell
@@ -362,7 +362,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.8
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.7 on macOS 10.12 (Sierra)
       language: shell
@@ -370,7 +370,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.7
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.6 on macOS 10.12 (Sierra)
       language: shell
@@ -378,7 +378,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.6
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.5 on macOS 10.12 (Sierra)
       language: shell
@@ -386,7 +386,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.5
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.4 on macOS 10.12 (Sierra)
       language: shell
@@ -394,7 +394,7 @@ matrix:
       osx_image: xcode9.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.6.4
-        - brew upgrade pyenv && pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.3 on macOS 10.12 (Sierra)
       language: shell
