@@ -118,7 +118,7 @@ Unchecked boxes aren't included in the above snippet. They can be copied-and-pas
 ### Operating Systems
 
 - [X] Ubuntu 16.04 (Xenial Xerus)
-- [X] Windows Server 1803
+- [X] Windows 10
 - [X] macOS 10.14 (Mojave)
 - [ ] macOS 10.13 (High Sierra)
 - [ ] macOS 10.12 (Sierra)
