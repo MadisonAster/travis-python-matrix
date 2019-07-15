@@ -1,5 +1,6 @@
 import os
 import platform
+import struct
 
 import distro
 
@@ -8,6 +9,7 @@ def test_matrix() -> None:
 
     python_implementation = platform.python_implementation()
     python_version = platform.python_version()
+    architecture = struct.calcsize("P") * 8
     system = platform.system()
 
     if system == "Darwin":
@@ -21,8 +23,12 @@ def test_matrix() -> None:
             version = "10.12 (Sierra)"
         else:
             assert False, version
+        assert architecture == 64, architecture
     elif system == "Windows":
-        version = platform.win32_ver()[0]
+        version = "{} ({}-bit)".format(
+            platform.win32_ver()[0],
+            architecture,
+        )
     elif system == "Linux":
         system = distro.name()
         version = distro.version()
@@ -33,6 +39,7 @@ def test_matrix() -> None:
                 assert False, version
         else:
             assert False, system
+        assert architecture == 64, architecture
     else:
         assert False, system
 
