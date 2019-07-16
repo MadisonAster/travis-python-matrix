@@ -17,7 +17,7 @@ The snippet below contains the necessary boilerplate to get consistent versions 
 # https://github.com/brandtbucher/travis-python-matrix
 
 # CPython 3.7.3 / CPython 3.6.8 / CPython 3.5.2
-# Ubuntu 16.04 (Xenial Xerus) / Windows 10 / macOS 10.14 (Mojave)
+# Ubuntu 16.04 (Xenial Xerus) / Windows 10 (64-bit) / macOS 10.14 (Mojave)
 
 # Just comment out any matrix entries you don't need.
 
@@ -43,21 +43,21 @@ matrix:
       dist: xenial
       python: 3.5.2
 
-    - name: CPython 3.7.3 on Windows 10
+    - name: CPython 3.7.3 on Windows 10 (64-bit)
       language: shell
       os: windows
       before_install:
         - export PATH=/c/Python37:/c/Python37/Scripts:$PATH
         - choco install python --version 3.7.3
 
-    - name: CPython 3.6.8 on Windows 10
+    - name: CPython 3.6.8 on Windows 10 (64-bit)
       language: shell
       os: windows
       before_install:
         - export PATH=/c/Python36:/c/Python36/Scripts:$PATH
         - choco install python --version 3.6.8
 
-    - name: CPython 3.5.2 on Windows 10
+    - name: CPython 3.5.2 on Windows 10 (64-bit)
       language: shell
       os: windows
       before_install:
@@ -103,23 +103,24 @@ Unchecked boxes aren't included in the above snippet. They can be copied-and-pas
 
 ### Python Versions
 
-- [X] CPython 3.7.3
+- [x] CPython 3.7.3
 - [ ] CPython 3.7.2
 - [ ] CPython 3.7.1
 - [ ] CPython 3.7.0
-- [X] CPython 3.6.8
+- [x] CPython 3.6.8
 - [ ] CPython 3.6.7
 - [ ] CPython 3.6.6
 - [ ] CPython 3.6.5
 - [ ] CPython 3.6.4
 - [ ] CPython 3.6.3
-- [X] CPython 3.5.2
+- [x] CPython 3.5.2
 
 ### Operating Systems
 
-- [X] Ubuntu 16.04 (Xenial Xerus)
-- [X] Windows 10
-- [X] macOS 10.14 (Mojave)
+- [x] Ubuntu 16.04 (Xenial Xerus)
+- [x] Windows 10 (64-bit)
+- [ ] Windows 10 (32-bit)
+- [x] macOS 10.14 (Mojave)
 - [ ] macOS 10.13 (High Sierra)
 - [ ] macOS 10.12 (Sierra)
  
