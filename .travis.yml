@@ -251,7 +251,7 @@ matrix:
       osx_image: xcode10.2
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.4
-        - CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.7.3 on macOS 10.14 (Mojave)
       language: shell
