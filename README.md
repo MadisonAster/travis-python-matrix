@@ -114,6 +114,8 @@ Unchecked boxes aren't included in the above snippet. They can be copied-and-pas
 - [ ] CPython 3.6.5
 - [ ] CPython 3.6.4
 - [ ] CPython 3.6.3
+- [ ] CPython 3.6.2
+- [ ] CPython 3.6.1
 - [x] CPython 3.5.2
 
 ### Operating Systems
