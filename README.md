@@ -16,7 +16,7 @@ The snippet below contains the necessary boilerplate to get consistent versions 
 ```yml
 # https://github.com/brandtbucher/travis-python-matrix
 
-# CPython 3.8.1 / CPython 3.7.4 / CPython 3.6.8 / CPython 3.5.2
+# CPython 3.8.1 / CPython 3.7.6 / CPython 3.6.8 / CPython 3.5.2
 # Ubuntu 16.04 (Xenial Xerus) / Windows 10 (64-bit) / macOS 10.14 (Mojave)
 
 # Just comment out any matrix entries you don't need.
@@ -31,11 +31,11 @@ matrix:
       dist: xenial
       python: 3.8.1
 
-    - name: CPython 3.7.4 on Ubuntu 16.04 (Xenial Xerus)
+    - name: CPython 3.7.6 on Ubuntu 16.04 (Xenial Xerus)
       language: python
       os: linux
       dist: xenial
-      python: 3.7.4
+      python: 3.7.6
 
     - name: CPython 3.6.8 on Ubuntu 16.04 (Xenial Xerus)
       language: python
@@ -56,12 +56,12 @@ matrix:
         - export PATH=/c/Python38:/c/Python38/Scripts:$PATH
         - choco install python --version 3.8.1
 
-    - name: CPython 3.7.4 on Windows 10 (64-bit)
+    - name: CPython 3.7.6 on Windows 10 (64-bit)
       language: shell
       os: windows
       before_install:
         - export PATH=/c/Python37:/c/Python37/Scripts:$PATH
-        - choco install python --version 3.7.4
+        - choco install python --version 3.7.6
 
     - name: CPython 3.6.8 on Windows 10 (64-bit)
       language: shell
@@ -85,12 +85,12 @@ matrix:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.8.1
         - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
-    - name: CPython 3.7.4 on macOS 10.14 (Mojave)
+    - name: CPython 3.7.6 on macOS 10.14 (Mojave)
       language: shell
       os: osx
       osx_image: xcode10.2
       before_install:
-        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.4
+        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.7.6
         - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.6.8 on macOS 10.14 (Mojave)
@@ -126,7 +126,9 @@ Unchecked boxes aren't included in the above snippet. They can be copied-and-pas
 
 - [x] CPython 3.8.1
 - [ ] CPython 3.8.0
-- [x] CPython 3.7.4
+- [X] CPython 3.7.6
+- [ ] CPython 3.7.5
+- [ ] CPython 3.7.4
 - [ ] CPython 3.7.3
 - [ ] CPython 3.7.2
 - [ ] CPython 3.7.1
