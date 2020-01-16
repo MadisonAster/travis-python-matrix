@@ -5,6 +5,12 @@ matrix:
 
   include:
 
+    - name: CPython 3.8.1 on Ubuntu 16.04 (Xenial Xerus)
+      language: python
+      os: linux
+      dist: xenial
+      python: 3.8.1
+
     - name: CPython 3.8.0 on Ubuntu 16.04 (Xenial Xerus)
       language: python
       os: linux
@@ -94,6 +100,13 @@ matrix:
       os: linux
       dist: xenial
       python: 3.5.2
+
+    - name: CPython 3.8.1 on Windows 10 (64-bit)
+      language: shell
+      os: windows
+      before_install:
+        - export PATH=/c/Python38:/c/Python38/Scripts:$PATH
+        - choco install python --version 3.8.1
 
     - name: CPython 3.8.0 on Windows 10 (64-bit)
       language: shell
@@ -200,6 +213,13 @@ matrix:
         - export PATH=/c/Python35:/c/Python35/Scripts:$PATH
         - choco install python --version 3.5.2.20161029
 
+    - name: CPython 3.8.1 on Windows 10 (32-bit)
+      language: shell
+      os: windows
+      before_install:
+        - export PATH=/c/Python38:/c/Python38/Scripts:$PATH
+        - choco install python --version 3.8.1 --x86
+
     - name: CPython 3.8.0 on Windows 10 (32-bit)
       language: shell
       os: windows
@@ -304,6 +324,14 @@ matrix:
       before_install:
         - export PATH=/c/Python35:/c/Python35/Scripts:$PATH
         - choco install python --version 3.5.2.20161029 --x86
+
+    - name: CPython 3.8.1 on macOS 10.14 (Mojave)
+      language: shell
+      os: osx
+      osx_image: xcode10.2
+      before_install:
+        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.8.1
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.8.0 on macOS 10.14 (Mojave)
       language: shell
@@ -425,6 +453,14 @@ matrix:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
         - CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install $PYENV_VERSION
 
+    - name: CPython 3.8.1 on macOS 10.13 (High Sierra)
+      language: shell
+      os: osx
+      osx_image: xcode10.1
+      before_install:
+        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.8.1
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
+
     - name: CPython 3.8.0 on macOS 10.13 (High Sierra)
       language: shell
       os: osx
@@ -544,6 +580,14 @@ matrix:
       before_install:
         - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.5.2
         - pyenv install $PYENV_VERSION
+
+    - name: CPython 3.8.1 on macOS 10.12 (Sierra)
+      language: shell
+      os: osx
+      osx_image: xcode9.2
+      before_install:
+        - export PATH=/Users/travis/.pyenv/shims:$PATH PYENV_VERSION=3.8.1
+        - travis_wait brew upgrade pyenv && pyenv install $PYENV_VERSION
 
     - name: CPython 3.8.0 on macOS 10.12 (Sierra)
       language: shell
