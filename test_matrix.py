@@ -15,7 +15,9 @@ def test_matrix() -> None:
     if system == "Darwin":
         system = "macOS"
         version = platform.mac_ver()[0]
-        if version.startswith("10.14"):
+        if version.startswith("10.15"):
+            version = "10.15 (Catalina)"
+        elif version.startswith("10.14"):
             version = "10.14 (Mojave)"
         elif version.startswith("10.13"):
             version = "10.13 (High Sierra)"
