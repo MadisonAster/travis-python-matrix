@@ -44,11 +44,3 @@ def test_matrix() -> None:
         assert architecture == 64, architecture
     else:
         assert False, system
-
-    name = "{} {} on {} {}".format(
-        platform.python_implementation(),
-        platform.python_version(),
-        system, version,
-    )
-
-    assert name == os.environ["TRAVIS_JOB_NAME"]
