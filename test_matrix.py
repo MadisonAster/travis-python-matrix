@@ -6,7 +6,7 @@ import distro
 
 
 def test_matrix() -> None:
-
+    print('test_matrix!!!!!!!!!!!')
     python_implementation = platform.python_implementation()
     python_version = platform.python_version()
     architecture = struct.calcsize("P") * 8
