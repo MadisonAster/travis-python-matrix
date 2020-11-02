@@ -11,7 +11,7 @@ setup(
     description='Test Matrix for Travis and cibuildwheel.',
     long_description=readme(),
     long_description_content_type='text/markdown',
-    python_requires='>3.5.0',
+    python_requires='>2.7.0',
     url='https://github.com/MadisonAster/travis-python-matrix',
     author='Madison Aster',
     author_email='info@MadisonAster.com',
