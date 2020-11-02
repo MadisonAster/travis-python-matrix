@@ -30,7 +30,7 @@ setup(
             'Programming Language :: Python :: 3.9',
             ],
 
-    keywords='travis cibuild matrix',
+    keywords='travis cibuildwheel matrix',
     package_dir = {'': ''},
-    packages=['travis-python-matrix'],
+    packages=['wheelhouse'],
 )
