@@ -19,7 +19,7 @@ jobs:
 env:
   global:
     - TWINE_USERNAME=__token__
-    - CIBW_TEST_COMMAND="python test_matrix.py"
+    - CIBW_TEST_COMMAND="python3 test_matrix.py"
     # Note: TWINE_PASSWORD is set to a PyPI API token in Travis settings
 install:
   - python3 -m pip install cibuildwheel==1.6.4
