@@ -25,7 +25,10 @@ install:
   - python3 -m pip install cibuildwheel==1.6.4
 script:
   # build the wheels, put them into './wheelhouse'
-  - python3 -m cibuildwheel --output-dir wheelhouse
+  #- python3 -m cibuildwheel --output-dir wheelhouse
+  
+  # pure python wheel
+  - pip wheel -w wheelhouse .
 after_success:
   # if the release was tagged, upload them to PyPI
   #python3 -m twine upload wheelhouse/*.whl
