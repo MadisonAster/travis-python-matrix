@@ -4,6 +4,8 @@ import struct
 
 import distro
 
+import numpy
+
 
 def test_matrix() -> None:
     print('test_matrix!!!!!!!!!!!')
