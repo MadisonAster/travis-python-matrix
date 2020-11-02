@@ -31,6 +31,6 @@ setup(
             ],
 
     keywords='travis cibuildwheel matrix',
-    package_dir = {'': ''},
-    packages=['wheelhouse'],
+    #package_dir = {'': ''},
+    #packages=['wheelhouse'],
 )
