@@ -31,6 +31,6 @@ setup(
             ],
 
     keywords='travis cibuild matrix',
-    package_dir = {'': 'wheelhouse'},
+    package_dir = {'': ''},
     packages=['travis-python-matrix'],
 )
