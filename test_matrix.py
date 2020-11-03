@@ -4,7 +4,7 @@ import struct
 
 import distro
 
-import numpy
+#import numpy
 
 
 def test_matrix() -> None:
