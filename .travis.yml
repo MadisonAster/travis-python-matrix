@@ -28,6 +28,7 @@ jobs:
 env:
   global:
     - TWINE_USERNAME=__token__
+    - CIBW_SKIP="cp27-* cp33-* cp34-* cp35-*"
     - CIBW_TEST_COMMAND="python3 test_matrix.py"
     # Note: TWINE_PASSWORD is set to a PyPI API token in Travis settings
 install:
