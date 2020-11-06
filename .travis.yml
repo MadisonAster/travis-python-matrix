@@ -42,11 +42,13 @@ install:
   - python3 -m pip install -r requirements.txt
   #- python3 -m pip install cibuildwheel==1.6.4
 script:
-  ## CIBUILDWHEEL
-  #- python3 test_matrix.py
+  ## unittest
+  - python3 test_matrix.py
+
+  ## cibuildwheel
   #- python3 -m cibuildwheel --output-dir wheelhouse
   
-  ## PURE
+  ## pure python
   - pip install wheel
   - pip wheel -w wheelhouse .
 after_success:
