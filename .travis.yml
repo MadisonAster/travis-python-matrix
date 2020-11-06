@@ -42,7 +42,7 @@ script:
   #- python3 -m cibuildwheel --output-dir wheelhouse
   
   # pure python wheel
-  - pip insall wheel
+  - pip install wheel
   - pip wheel -w wheelhouse .
 after_success:
   # if the release was tagged, upload them to PyPI
