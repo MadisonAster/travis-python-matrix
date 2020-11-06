@@ -39,10 +39,10 @@ install:
 script:
   # build the wheels, put them into './wheelhouse'
   #- python3 test_matrix.py
-  - python3 -m cibuildwheel --output-dir wheelhouse
+  #- python3 -m cibuildwheel --output-dir wheelhouse
   
   # pure python wheel
-  #- pip wheel -w wheelhouse .
+  - pip wheel -w wheelhouse .
 after_success:
   # if the release was tagged, upload them to PyPI
   #python3 -m twine upload wheelhouse/*.whl
