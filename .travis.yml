@@ -1,23 +1,28 @@
 language: python
 jobs:
   include:
-    # perform a linux build
+    ## linux build
     - services: docker
-    # perform a linux ARMv8 build
-    - services: docker
-      arch: arm64
-    # perform a linux PPC64LE build
-    - services: docker
-      arch: ppc64le
-    # perform a linux S390X build
-    - services: docker
-      arch: s390x
-    # and a mac build
+    
+    ## linux ARMv8 build
+    #- services: docker
+    #  arch: arm64
+    
+    ## linux PPC64LE build
+    #- services: docker
+    #  arch: ppc64le
+    
+    ## linux S390X build
+    #- services: docker
+    #  arch: s390x
+    
+    ## osx build
     - os: osx
       # PyPy 7.3.2 needs macOS >= 10.14
       osx_image: xcode10.2
       language: shell
-    # and a windows build
+    
+    ## windows build
     - os: windows
       language: shell
       before_install:
@@ -34,18 +39,18 @@ env:
     #- CIBW_TEST_COMMAND="python -m unittest discover -f -s {project}/tests"
     # Note: TWINE_PASSWORD is set to a PyPI API token in Travis settings
 install:
-  #- python3 -m pip install -r requirements.txt
+  - python3 -m pip install -r requirements.txt
   #- python3 -m pip install cibuildwheel==1.6.4
 script:
-  # build the wheels, put them into './wheelhouse'
+  ## CIBUILDWHEEL
   #- python3 test_matrix.py
   #- python3 -m cibuildwheel --output-dir wheelhouse
   
-  # pure python wheel
+  ## PURE
   - pip install wheel
   - pip wheel -w wheelhouse .
 after_success:
-  # if the release was tagged, upload them to PyPI
+  #if the release was tagged, upload them to PyPI
   #python3 -m twine upload wheelhouse/*.whl
   - |
     if [[ $TRAVIS_TAG ]]; then
