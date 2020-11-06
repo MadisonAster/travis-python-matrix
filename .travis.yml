@@ -29,7 +29,9 @@ env:
   global:
     - TWINE_USERNAME=__token__
     - CIBW_SKIP="cp27-* cp33-* cp34-* cp35-*"
-    - CIBW_TEST_COMMAND="python3 test_matrix.py"
+    - CIBW_BEFORE_TEST="pip install -r requirements.txt"
+    - CIBW_TEST_COMMAND="python3 {project}/test_matrix.py"
+    #- CIBW_TEST_COMMAND="python -m unittest discover -f -s {project}/tests"
     # Note: TWINE_PASSWORD is set to a PyPI API token in Travis settings
 install:
   #- python3 -m pip install -r requirements.txt
