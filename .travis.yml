@@ -4,18 +4,6 @@ jobs:
     ## linux build
     - services: docker
     
-    ## linux ARMv8 build
-    #- services: docker
-    #  arch: arm64
-    
-    ## linux PPC64LE build
-    #- services: docker
-    #  arch: ppc64le
-    
-    ## linux S390X build
-    #- services: docker
-    #  arch: s390x
-    
     ## osx build
     - os: osx
       # PyPy 7.3.2 needs macOS >= 10.14
