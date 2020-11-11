@@ -1,2 +1,2 @@
-numpy>=1.16.5
+FooFinder>=3.0.13
 distro>=1.5.0
