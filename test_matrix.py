@@ -4,7 +4,8 @@ import struct
 
 import distro
 
-import numpy
+#import numpy
+from FooFinder import TestPackage
 
 
 def test_matrix() -> None:
